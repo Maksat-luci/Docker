@@ -18,11 +18,11 @@ const startServer = () => {
     //     if (err) return console.error(err);
     //     console.log("posts", posts)
     // });
-    const silence = new Post({ name: "Silence"});
-    silence.save(function(err, savedSilence) {
-        if (err) return console.error(err);
-        console.log("savedSilence", savedSilence)
-    });
+        const silence = new Post({ name: "Silence"});
+        silence.save(function(err, savedSilence) {
+            if (err) return console.error(err);
+            console.log("savedSilence with volume", savedSilence)
+        });
 
 
 
