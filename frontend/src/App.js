@@ -1,7 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios'
 
 function App() {
+  const makeApiRequest = () => {
+    console.log("make api request")
+    axios('/api/testwithcurrentuser').then(response => {
+      console.log("response", response)
+    })
+  }
 
   return (
     <div className="App">
@@ -9,7 +16,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and change to reload change from docker.
-          We  are in dev
+          you  are in Champion because you not a standard human
         </p>
         <a
           className="App-link"
@@ -20,6 +27,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <button onClick={makeApiRequest}>Make api request</button>
     </div>
   );
 }
